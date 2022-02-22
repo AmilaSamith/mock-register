@@ -43,6 +43,7 @@ namespace CDR.Register.Admin.API.Controllers
             var jwk = new CDR.Register.API.Infrastructure.Models.JsonWebKey()
             {
                 alg = "PS256",
+                use = "sig",
                 kid = kid,
                 kty = "RSA",
                 n = n,
