@@ -21,7 +21,7 @@ namespace CDR.Register.SSA.API.Business
                 .ForMember(d => d.client_name, s => s.MapFrom(source => source.SoftwareProduct.SoftwareProductName))
                 .ForMember(d => d.client_description, s => s.MapFrom(source => source.SoftwareProduct.SoftwareProductDescription))
                 .ForMember(d => d.client_uri, s => s.MapFrom(source => source.SoftwareProduct.ClientUri))
-                .ForMember(d => d.jwks_uri, s => s.MapFrom(source => source.SoftwareProduct.JwksUri))
+                .ForMember(d => d.jwks_uri, s => s.MapFrom(source => "https://192.168.108.65:7006/loopback/MockDataRecipientJwks"))
                 .ForMember(d => d.logo_uri, s => s.MapFrom(source => source.SoftwareProduct.LogoUri))
                 .ForMember(d => d.org_id, s => s.MapFrom(source => source.DataRecipientBrand.BrandId))
                 .ForMember(d => d.org_name, s => s.MapFrom(source => source.DataRecipientBrand.BrandName))
